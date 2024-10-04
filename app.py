@@ -1,10 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Calculadora de Conversão - Backend em Flask"
+    return render_template('index.html')
 
 @app.route('/convert/temperature', methods=['GET'])
 def convert_temperature():
