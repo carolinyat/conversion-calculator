@@ -1,0 +1,58 @@
+<!--  index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='icons/calc.png') }}"
+      type="image/x-icon"
+    />
+    <title>Calculadora de Conversão</title>
+  </head>
+
+  <body>
+    <h1>Calculadoras de Conversão</h1>
+    <h2>Calculadora de Conversão de Temperatura</h2>
+    <div class="temperatura">
+      <input type="number" id="value" placeholder="Valor" />
+      <select id="from">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+      </select>
+      <select id="to">
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="celsius">Celsius</option>
+      </select>
+      <button onclick="convert()">Converter Temperatura</button>
+      <p id="result"></p>
+    </div>
+
+    <h2>Calculadora de Conversão de Moeda</h2>
+    <div class="moedas">
+      <input type="number" id="amount" placeholder="Valor" />
+      <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+      <select id="toCurrency">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+      </select>
+      <button onclick="convertCurrency()">Converter Moeda</button>
+      <p id="currencyResult"></p>
+    </div>
+
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
